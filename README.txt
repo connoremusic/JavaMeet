@@ -3,7 +3,7 @@ Application Version: v1.1
 Date: August 2, 2022
 Author: Connor Engstrom
 Student ID: 007473978
-Contact: cengst@wgu.edu
+Contact: connor.e.music@gmail.com
 IDE: IntelliJ IDEA 2022.1.3 (Community Edition)
 JDK Version: 17.0.3.1
 JavaFX Version: 17.0.0.1
