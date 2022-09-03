@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #5b7997;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CustomersByLocationController">
+   <children>
+      <TableView fx:id="customerInsightsTable" fixedCellSize="0.0" layoutX="9.0" layoutY="71.0" prefHeight="319.0" prefWidth="582.0" stylesheets="@style.css">
+        <columns>
+          <TableColumn fx:id="locationColumn" prefWidth="75.0" text="Location" />
+          <TableColumn fx:id="totalColumn" prefWidth="75.0" text="Total Customers" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <Label layoutX="14.0" layoutY="21.0" prefHeight="42.0" prefWidth="345.0" text="Customer Insights" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="36.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="byCountryRadio" layoutX="327.0" layoutY="30.0" mnemonicParsing="false" onAction="#showCustomersByCountry" stylesheets="@style.css" text="By Country" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="locationRadio" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="bySubdivisionRadio" layoutX="451.0" layoutY="30.0" mnemonicParsing="false" onAction="#showCustomersBySubdivision" stylesheets="@style.css" text="By Subdivision" textFill="WHITE" toggleGroup="$locationRadio">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </RadioButton>
+   </children>
+</AnchorPane>

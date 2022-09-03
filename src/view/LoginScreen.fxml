@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="350.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginScreenController">
+   <children>
+      <AnchorPane fx:id="anchorPane" onMouseDragged="#dragWindow" prefHeight="144.0" prefWidth="350.0">
+         <children>
+            <ImageView fitHeight="172.0" fitWidth="350.0" onMousePressed="#clickWindow" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/images/business_handshake1.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="113.0" fitWidth="186.0" layoutX="118.0" layoutY="72.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/icons/baseline_account_circle_navy_48dp.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="49.0" fitWidth="37.0" layoutX="57.0" layoutY="250.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/icons/baseline_person_black_48dp.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="37.0" fitWidth="37.0" layoutX="57.0" layoutY="296.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/icons/baseline_lock_black_48dp.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="loginLabel" alignment="CENTER" layoutY="201.0" prefHeight="21.0" prefWidth="350.0" text="Login" textAlignment="CENTER">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="loginButton" layoutX="57.0" layoutY="395.0" mnemonicParsing="false" onAction="#pressLoginButton" prefHeight="28.0" prefWidth="236.0" styleClass="largeButton" text="Login" />
+      <TextField fx:id="usernameField" layoutX="100.0" layoutY="254.0" onAction="#pressLoginButton" prefHeight="28.0" prefWidth="193.0" promptText="Username" styleClass="roundedTextField">
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color opacity="0.25" />
+               </color>
+            </DropShadow>
+         </effect></TextField>
+      <PasswordField fx:id="passwordField" layoutX="100.0" layoutY="300.0" onAction="#pressLoginButton" prefHeight="28.0" prefWidth="193.0" promptText="Password" styleClass="roundedTextField">
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color opacity="0.25" />
+               </color>
+            </DropShadow>
+         </effect></PasswordField>
+      <ComboBox fx:id="languageComboBox" layoutX="100.0" layoutY="346.0" prefHeight="28.0" prefWidth="193.0" styleClass="languageComboBox" />
+      <ImageView fitHeight="37.0" fitWidth="37.0" layoutX="57.0" layoutY="342.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/icons/baseline_language_black_48dp.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="timeZoneLabel" layoutX="159.0" layoutY="475.0" text="Time Zone" textFill="GREY" AnchorPane.leftAnchor="20.0" />
+      <Label fx:id="zoneLabel" layoutX="226.0" layoutY="475.0" text="Error: not found" textFill="#808080" AnchorPane.rightAnchor="20.0" />
+      <Button fx:id="exitButton" layoutX="296.0" layoutY="10.0" mnemonicParsing="false" onAction="#exitProgram" styleClass="largeButton" text="Exit" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Button>
+   </children>
+</AnchorPane>

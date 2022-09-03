@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="540.0" prefWidth="540.0" style="-fx-background-color: #5b7997;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.NewCustomerController">
+   <children>
+      <Button fx:id="cancelButton" layoutX="228.0" layoutY="475.0" mnemonicParsing="false" onAction="#closeWindow" prefHeight="30.0" prefWidth="117.0" styleClass="largeButton" text="Cancel">
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/icons/baseline_highlight_off_white_48dp.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="addButton" layoutX="358.0" layoutY="475.0" mnemonicParsing="false" onAction="#addCustomer" prefHeight="30.0" prefWidth="117.0" styleClass="largeButton" text="Add">
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/icons/baseline_add_white_48dp.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Label alignment="CENTER" layoutY="20.0" prefHeight="42.0" prefWidth="540.0" text="New Customer" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="36.0" />
+         </font></Label>
+      <HBox layoutY="90.0" prefHeight="370.0" prefWidth="540.0">
+         <children>
+            <VBox alignment="TOP_RIGHT" prefHeight="393.0" prefWidth="270.0" spacing="30.0">
+               <children>
+                  <Label alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="156.0" text="Name" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" layoutX="78.0" layoutY="10.0" prefHeight="30.0" prefWidth="156.0" text="Address" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="TOP_RIGHT" layoutX="104.0" layoutY="10.0" prefHeight="30.0" prefWidth="156.0" text="Postal Code" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" layoutX="104.0" layoutY="10.0" prefHeight="30.0" prefWidth="156.0" text="Phone" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" layoutX="104.0" layoutY="117.0" prefHeight="30.0" prefWidth="156.0" text="Country" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" layoutX="104.0" layoutY="154.0" prefHeight="30.0" prefWidth="156.0" text="State/Province" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets right="20.0" />
+               </padding></VBox>
+            <VBox prefHeight="370.0" prefWidth="323.0" spacing="30.0">
+               <children>
+                  <TextField fx:id="nameField" prefHeight="30.0" prefWidth="179.0" promptText="Name">
+                     <VBox.margin>
+                        <Insets right="65.0" />
+                     </VBox.margin></TextField>
+                  <TextField fx:id="addressField" prefHeight="30.0" prefWidth="233.0" promptText="Address">
+                     <VBox.margin>
+                        <Insets right="65.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField fx:id="postalCodeField" prefHeight="30.0" prefWidth="185.0" promptText="Postal Code">
+                     <VBox.margin>
+                        <Insets right="65.0" />
+                     </VBox.margin></TextField>
+                  <TextField fx:id="phoneField" prefHeight="30.0" prefWidth="185.0" promptText="(555) 555-5555">
+                     <VBox.margin>
+                        <Insets right="65.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <ComboBox fx:id="countryCombo" onAction="#populateDivisionCombo" prefHeight="30.0" prefWidth="185.0" promptText="Select a Country" />
+                  <ComboBox fx:id="divisionCombo" prefHeight="30.0" prefWidth="185.0" promptText="Select a State/Province" />
+               </children>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </VBox>
+         </children></HBox>
+   </children>
+</AnchorPane>

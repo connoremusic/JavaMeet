@@ -1,0 +1,82 @@
+.loginPane {
+    -fx-background-color: linear-gradient(to right bottom, #a93ac2, #911fab);
+}
+
+.largeButton {
+    -fx-background-color: #34495e;
+    -fx-text-fill: #ffffff;
+    -fx-font-family: "Arial";
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-background-radius: 15;
+}
+
+.largeButton: hover {
+    -fx-background-color: #2c3e50;
+}
+
+.roundedTextField {
+    -fx-background-radius: 15;
+    /*-fx-padding: 0, 0, 0, 50px;*/
+    -fx-background-color: #ffffff
+}
+
+.languageComboBox {
+    -fx-background-radius: 15;
+}
+
+.sideButton {
+    -fx-background-color: #34495e;
+    -fx-text-fill: #ffffff;
+    -fx-font-family: "Arial";
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-alignment: BASELINE_LEFT;
+    -fx-padding: 20;
+}
+
+.sideButton: hover {
+    -fx-background-color: #2c3e50;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: #ffffff;
+}
+
+.table-view .column-header {
+    -fx-background-color: #34495e;
+    -fx-border-color: #c2e2fc;
+}
+
+.radio-button .radio {
+    -fx-border-width: 1px;
+    -fx-border-color: #34495e;
+    -fx-background-color: white;
+    -fx-background-image: null;
+    -fx-border-radius: 15px;
+    -fx-padding: 3px;
+}
+.radio-button .radio:selected {
+    -fx-background-color: white;
+    -fx-background-image: null;
+}
+.radio-button:selected .radio .dot {
+    -fx-background-color: #34495e;
+    -fx-background-insets: 0;
+}
+.radio-button -radio:armed {
+    -fx-background-color: white;
+    -fx-background-image: null;
+}
+.radio-button -radio:determinate {
+    -fx-background-color: white;
+    -fx-background-image: null;
+}
+.radio-button -radio:indeterminate {
+    -fx-background-color: white;
+    -fx-background-image: null;
+}
+.radio-button .dot {
+    -fx-background-radius: 15px;
+    -fx-padding: 8px;
+}

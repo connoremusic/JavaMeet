@@ -1,0 +1,72 @@
+package utilities;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+public abstract class JDBC {
+    private static final String protocol = "jdbc";
+    private static final String vendor = ":mysql:";
+    private static final String location = "//localhost/";
+    private static final String databaseName = "client_schedule";
+    private static final String jdbcUrl = protocol + vendor + location + databaseName + "?connectionTimeZone = SERVER"; // LOCAL
+    private static final String driver = "com.mysql.cj.jdbc.Driver"; // Driver reference
+    private static final String userName = "sqlUser"; // Username
+    private static final String password = "Passw0rd!"; // Password
+    private static Connection connection = null;  // Connection Interface
+    private static PreparedStatement preparedStatement;
+
+    /**
+     * This method uses the MySQL connector driver to make a connection with a MySQL database
+     */
+    public static void makeConnection() {
+
+        try {
+            Class.forName(driver); // Locate Driver
+            //password = Details.getPassword(); // Assign password
+            connection = DriverManager.getConnection(jdbcUrl, userName, password); // reference Connection object
+            System.out.println("Database connection successful");
+        } catch (ClassNotFoundException e) {
+            System.out.println("Error:" + e.getMessage());
+        } catch (SQLException e) {
+            System.out.println("Error:" + e.getMessage());
+        }
+    }
+
+    /**
+     * This method returns the current open connection to a MySQL database
+     * @return returns the connection to the database
+     */
+    public static Connection getConnection() {
+        return connection;
+    }
+
+    /**
+     * This method closes an open connection to the MySQL database
+     */
+    public static void closeConnection() {
+        try {
+            connection.close();
+            System.out.println("Database connection closed");
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+    public static void makePreparedStatement(String sqlStatement, Connection conn) throws SQLException {
+        if (conn != null)
+            preparedStatement = conn.prepareStatement(sqlStatement);
+        else
+            System.out.println("Prepared Statement Creation Failed!");
+    }
+
+    public static PreparedStatement getPreparedStatement() throws SQLException {
+        if (preparedStatement != null)
+            return preparedStatement;
+        else System.out.println("Null reference to Prepared Statement");
+        return null;
+    }
+
+
+}

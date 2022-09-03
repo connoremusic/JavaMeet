@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="540.0" prefWidth="960.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ReportScreenController">
+    <children>
+        <VBox prefHeight="540.0" prefWidth="194.0" style="-fx-background-color: #34495e;">
+            <children>
+                <Pane onMouseDragged="#dragWindow" onMousePressed="#clickWindow" prefHeight="138.0" prefWidth="194.0">
+                    <children>
+                        <ImageView fitHeight="138.0" fitWidth="159.0" layoutX="24.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../resources/images/java_meet_transparent.png" />
+                            </image>
+                        </ImageView>
+                    </children>
+                </Pane>
+                <Button fx:id="scheduleButton" graphicTextGap="10.0" mnemonicParsing="false" onAction="#showScheduleScreen" prefHeight="46.0" prefWidth="194.0" styleClass="sideButton" text="SCHEDULE" textFill="WHITE">
+                    <graphic>
+                        <ImageView fitHeight="34.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../resources/icons/baseline_calendar_month_white_48dp.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button fx:id="customerButton" graphicTextGap="10.0" layoutX="10.0" layoutY="148.0" mnemonicParsing="false" onAction="#showCustomerScreen" prefHeight="46.0" prefWidth="194.0" styleClass="sideButton" text="CUSTOMERS" textFill="WHITE">
+                    <graphic>
+                        <ImageView fitHeight="34.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../resources/icons/baseline_groups_white_48dp.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+            <Button fx:id="contactButton" graphicTextGap="10.0" layoutX="10.0" layoutY="296.0" mnemonicParsing="false" onAction="#showContactScreen" prefHeight="46.0" prefWidth="194.0" styleClass="sideButton" text="CONTACTS" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="34.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/icons/baseline_contact_page_white_48dp.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+                <Button fx:id="reportButton" graphicTextGap="10.0" layoutX="10.0" layoutY="194.0" mnemonicParsing="false" onAction="#showReportScreen" prefHeight="46.0" prefWidth="194.0" styleClass="sideButton" text="REPORTS" textFill="WHITE">
+                    <graphic>
+                        <ImageView fitHeight="34.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../resources/icons/baseline_leaderboard_white_48dp.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+            </children></VBox>
+        <AnchorPane layoutX="194.0" prefHeight="540.0" prefWidth="766.0">
+            <children>
+                <AnchorPane fx:id="anchorPane" onMouseDragged="#dragWindow" onMousePressed="#clickWindow" prefHeight="138.0" prefWidth="766.0" style="-fx-background-color: #5b7997;">
+                    <children>
+                        <Button fx:id="exitButton" layoutX="708.0" layoutY="14.0" mnemonicParsing="false" onAction="#exitProgram" styleClass="largeButton" text="Exit" />
+                        <Label layoutX="11.0" layoutY="64.0" prefWidth="267.0" text="Reports" textFill="WHITE">
+                            <font>
+                                <Font name="Arial" size="64.0" />
+                            </font>
+                        </Label>
+                        <Button fx:id="aboutButton" layoutX="639.0" layoutY="14.0" mnemonicParsing="false" onAction="#showAboutScreen" styleClass="largeButton" text="About" />
+                    </children></AnchorPane>
+            <GridPane alignment="BASELINE_CENTER" layoutX="20.0" layoutY="204.0" prefHeight="266.0" prefWidth="726.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="257.0" minHeight="10.0" percentHeight="0.0" prefHeight="227.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="110.0" minHeight="10.0" percentHeight="0.0" prefHeight="63.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button fx:id="byMonthButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#showAppointmentsByMonth" prefHeight="200.0" prefWidth="200.0" styleClass="largeButton" textAlignment="CENTER" wrapText="true" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets left="20.0" right="20.0" />
+                     </GridPane.margin>
+                     <graphic>
+                        <ImageView fitHeight="125.0" fitWidth="125.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/icons/baseline_event_note_white_48dp.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button fx:id="byTypeButton" mnemonicParsing="false" onAction="#showAppointmentsByType" prefHeight="200.0" prefWidth="200.0" styleClass="largeButton" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets left="20.0" right="20.0" />
+                     </GridPane.margin>
+                     <graphic>
+                        <ImageView fitHeight="125.0" fitWidth="125.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/icons/baseline_category_white_48dp.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button fx:id="customerLocationButton" mnemonicParsing="false" onAction="#showCustomersByLocation" prefHeight="200.0" prefWidth="200.0" styleClass="largeButton" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets left="20.0" right="20.0" />
+                     </GridPane.margin>
+                     <graphic>
+                        <ImageView fitHeight="125.0" fitWidth="125.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/icons/baseline_travel_explore_white_48dp.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Label alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="57.0" prefWidth="242.0" text="Appointments by Month" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font></Label>
+                  <Label alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="233.0" prefHeight="57.0" prefWidth="242.0" text="Appointments by Type" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="252.0" layoutY="233.0" prefHeight="57.0" prefWidth="242.0" text="Customers by Location" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </GridPane>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

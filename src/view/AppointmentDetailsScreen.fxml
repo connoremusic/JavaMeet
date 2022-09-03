@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="650.0" prefWidth="400.0" style="-fx-background-color: #5b7997;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AppointmentDetailsScreen">
+   <children>
+      <Button fx:id="closeButton" layoutX="265.0" layoutY="600.0" mnemonicParsing="false" onAction="#closeWindow" prefHeight="30.0" prefWidth="115.0" styleClass="largeButton" stylesheets="@style.css" text="Close">
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/icons/baseline_highlight_off_white_48dp.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Label alignment="BASELINE_CENTER" contentDisplay="CENTER" layoutY="20.0" prefHeight="17.0" prefWidth="400.0" text="Appointment Details" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="36.0" />
+         </font></Label>
+      <HBox layoutY="70.0" prefHeight="524.0" prefWidth="400.0">
+         <children>
+            <VBox alignment="TOP_RIGHT" prefHeight="390.0" prefWidth="180.0" spacing="10.0">
+               <children>
+                  <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="27.0" prefWidth="155.0" text="Appointment ID" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font></Label>
+                  <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="40.0" layoutY="330.0" prefHeight="27.0" prefWidth="155.0" text="Customer" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="20.0" layoutY="417.0" prefHeight="27.0" prefWidth="155.0" text="Contact" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="20.0" layoutY="454.0" prefHeight="27.0" prefWidth="155.0" text="Contact Email" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="40.0" layoutY="10.0" prefHeight="27.0" prefWidth="155.0" text="Title" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="40.0" layoutY="42.0" prefHeight="27.0" prefWidth="155.0" text="Description" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="40.0" layoutY="74.0" prefHeight="27.0" prefWidth="155.0" text="Location" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="40.0" layoutY="106.0" prefHeight="27.0" prefWidth="155.0" text="Type" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="40.0" layoutY="138.0" prefHeight="27.0" prefWidth="155.0" text="Start" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="40.0" layoutY="170.0" prefHeight="27.0" prefWidth="155.0" text="End" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="40.0" layoutY="202.0" prefHeight="27.0" prefWidth="155.0" text="Create Date" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="40.0" layoutY="234.0" prefHeight="27.0" prefWidth="155.0" text="Created by" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="40.0" layoutY="266.0" prefHeight="27.0" prefWidth="155.0" text="Last Update" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="40.0" layoutY="298.0" prefHeight="27.0" prefWidth="155.0" text="Last Update by" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets right="15.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </VBox>
+            <VBox prefHeight="390.0" prefWidth="219.0" spacing="10.0">
+               <children>
+                  <TextField fx:id="idField" editable="false" prefHeight="27.0" prefWidth="201.0">
+                     <VBox.margin>
+                        <Insets right="25.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField fx:id="customerField" editable="false" layoutX="10.0" layoutY="10.0" prefHeight="27.0" prefWidth="201.0">
+                     <VBox.margin>
+                        <Insets right="25.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField fx:id="contactField" editable="false" layoutX="10.0" layoutY="40.0" prefHeight="27.0" prefWidth="201.0">
+                     <VBox.margin>
+                        <Insets right="25.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField fx:id="emailField" editable="false" layoutX="10.0" layoutY="452.0" prefHeight="27.0" prefWidth="201.0">
+                     <VBox.margin>
+                        <Insets right="25.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField fx:id="titleField" editable="false" layoutX="10.0" layoutY="70.0" prefHeight="27.0" prefWidth="201.0">
+                     <VBox.margin>
+                        <Insets right="25.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField fx:id="descriptionField" editable="false" layoutX="10.0" layoutY="100.0" prefHeight="27.0" prefWidth="201.0">
+                     <VBox.margin>
+                        <Insets right="25.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField fx:id="locationField" editable="false" layoutX="10.0" layoutY="130.0" prefHeight="27.0" prefWidth="201.0">
+                     <VBox.margin>
+                        <Insets right="25.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField fx:id="typeField" editable="false" layoutX="10.0" layoutY="160.0" prefHeight="25.0" prefWidth="201.0">
+                     <VBox.margin>
+                        <Insets right="25.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField fx:id="startField" editable="false" layoutX="10.0" layoutY="190.0" prefHeight="27.0" prefWidth="201.0">
+                     <VBox.margin>
+                        <Insets right="25.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField fx:id="endField" editable="false" layoutX="10.0" layoutY="232.0" prefHeight="27.0" prefWidth="201.0">
+                     <VBox.margin>
+                        <Insets right="25.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField fx:id="createDateField" editable="false" layoutX="10.0" layoutY="264.0" prefHeight="27.0" prefWidth="201.0">
+                     <VBox.margin>
+                        <Insets right="25.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField fx:id="createdByField" editable="false" layoutX="10.0" layoutY="296.0" prefHeight="27.0" prefWidth="201.0">
+                     <VBox.margin>
+                        <Insets right="25.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField fx:id="lastUpdateField" editable="false" layoutX="10.0" layoutY="328.0" prefHeight="27.0" prefWidth="201.0">
+                     <VBox.margin>
+                        <Insets right="25.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField fx:id="lastUpdatedByField" editable="false" layoutX="10.0" layoutY="415.0" prefHeight="27.0" prefWidth="201.0">
+                     <VBox.margin>
+                        <Insets right="25.0" />
+                     </VBox.margin>
+                  </TextField>
+               </children></VBox>
+         </children></HBox>
+   </children>
+</AnchorPane>
